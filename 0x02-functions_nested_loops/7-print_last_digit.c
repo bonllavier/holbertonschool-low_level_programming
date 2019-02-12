@@ -1,0 +1,17 @@
+#include "holberton.h"
+#include <stdio.h>
+/**
+ *print_last_digit - checks for lowercase character.
+ *@c: get value to be used for get the last digit
+ *Return: int.
+ */
+int print_last_digit(int c)
+{
+if (c < 0)
+{
+c = c * -1;
+}
+c = (c % 10);
+_putchar(c + '0');
+return (c);
+}
