@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *print_alphabet - prints the alphabet, in lowercase.
+ *mul - multipli.
  *@a: value to be validate.
  *@b: value to be validate.
  *Return: int.

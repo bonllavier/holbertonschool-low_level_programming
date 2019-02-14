@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  *print_triangle - prints a triangle.
- *
+ *@size: varaible to evaluate.
  *Return: not.
  */
 void print_triangle(int size)
@@ -23,7 +23,7 @@ _putchar('#');
 else
 {
 _putchar(' ');
-} 
+}
 }
 _putchar('\n');
 }

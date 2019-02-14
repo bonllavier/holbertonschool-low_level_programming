@@ -18,12 +18,12 @@ for (x = 1 ; x <= c ; x++)
 {
 if (c != x)
 {
-putchar(' ');
+_putchar(' ');
 }
 else if (c == x)
 {
-putchar('\\');
-putchar('\n');
+_putchar('\\');
+_putchar('\n');
 }
 }
 }
@@ -31,6 +31,6 @@ putchar('\n');
 }
 else
 {
-putchar('\n');
+_putchar('\n');
 }
 }
