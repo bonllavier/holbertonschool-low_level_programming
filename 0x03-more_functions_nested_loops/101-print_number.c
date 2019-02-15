@@ -6,15 +6,11 @@
  */
 void print_number(int n)
 {
-int x;
+int x = n;
 if (n < 0)
 {
-x = -n;
+x = -x;
 _putchar('-');
-}
-else
-{
-x = n;
 }
 if ((x / 10) > 0)
 {
