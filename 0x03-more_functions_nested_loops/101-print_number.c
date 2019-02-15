@@ -6,23 +6,19 @@
  */
 void print_number(int n)
 {
-int x = n;
+int x;
 if (n < 0)
 {
 x = -n;
 _putchar('-');
 }
-if (x > 999)
+else
 {
-_putchar((x / 1000) % 10 + '0');
+x = n;
 }
-if (x > 99)
+if ((x / 10) > 0)
 {
-_putchar((x / 100) % 10 + '0');
-}
-if (x > 9)
-{
-_putchar((x / 10) % 10 + '0');
+print_number(x / 10);
 }
 _putchar((x % 10) + '0');
 }
