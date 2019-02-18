@@ -7,9 +7,9 @@
  */
 int main(void)
 {
-int n = 1024;
-int x;
-int s = 0;
+long int n = 1024;
+long int x;
+long int s = 0;
 for (x = 1 ; x < n ; x++)
 {
 if ((x % 3) == 0)
@@ -21,6 +21,6 @@ if ((x % 5) == 0)
 s = x + s;
 }
 }
-printf("%d\n", s);
+printf("%ld\n", s);
 return (0);
 }

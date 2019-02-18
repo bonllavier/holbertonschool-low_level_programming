@@ -1,4 +1,3 @@
-#include "holberton.h"
 #include <stdio.h>
 /**
  * main - print 98 fibbonaci.
@@ -29,6 +28,6 @@ printf(", ");
 z = y;
 y = res;
 }
-putchar('\n');
+printf("\n");
 return (0);
 }

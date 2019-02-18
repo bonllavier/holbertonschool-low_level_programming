@@ -1,10 +1,11 @@
 #include "holberton.h"
+#include "stdio.h"
 /**
- *times_table - prints the 9 times table, starting with 0.
+ *main - fibonacci.
  *
  *Return: not.
  */
-void times_table(void)
+int main(void)
 {
 long int z = 1;
 long int y = 2;
@@ -25,8 +26,7 @@ else
 {
 t = 0;
 }
-x++;
 }
-printf("%ld", res2 + 2);
+printf("%ld\n", res2 + 2);
 return (0);
 }
