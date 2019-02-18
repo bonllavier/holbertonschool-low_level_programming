@@ -7,27 +7,30 @@
  */
 int main(void)
 {
-long int z = 1;
-long int y = 2;
-long int res = 0;
-long int res2 = 0;
+unsigned long int z = 1;
+unsigned long int y = 2;
+unsigned long int res = 0;
+unsigned long int res2 = 0;
 int t = 1;
-long int maxI = 4000000;
+unsigned long int maxI = 4000000;
 while (t)
 {
-res = y + z;
+res = z + y;
 if (res < maxI)
 {
 z = y;
 y = res;
+if (res % 2 == 0)
+{
 res2 = res2 + res;
+}
 }
 else
 {
-t = 0;
+break;
 }
 }
-res2=res2+2;
+res2 = res2 + 2;
 printf("%ld\n", res2);
 return (0);
 }
