@@ -8,20 +8,17 @@
 int main(void)
 {
 int x;
-long int z = 1;
-long int y = 2;
-long int res;
-for (x = 1; x <= 50 ; x++)
-{
-if (x < 2)
-{
-printf("%ld", z);
+unsigned long int z = 1;
+unsigned long int y = 2;
+unsigned long int res;
+printf("%lu", z);
 printf(", ");
-printf("%ld", y);
+printf("%lu", y);
 printf(", ");
-}
+for (x = 3; x <= 50 ; x++)
+{
 res = y + z;
-printf("%ld", res);
+printf("%lu", res);
 if (x != 50)
 {
 printf(", ");

@@ -12,11 +12,7 @@ long int x;
 long int s = 0;
 for (x = 1 ; x < n ; x++)
 {
-if ((x % 3) == 0)
-{
-s = x + s;
-}
-if ((x % 5) == 0)
+if ((x % 3) == 0 || (x % 5) == 0)
 {
 s = x + s;
 }

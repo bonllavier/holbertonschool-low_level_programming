@@ -27,6 +27,7 @@ else
 t = 0;
 }
 }
-printf("%ld\n", res2 + 2);
+res2=res2+2;
+printf("%ld\n", res2);
 return (0);
 }
