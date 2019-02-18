@@ -15,9 +15,12 @@ if (num % divn == 0)
 while (num % divn == 0)
 {
 num = num / divn;
-}
-}
-}
+if(num == 1)
+{
 printf("%ld\n", divn);
+}
+}
+}
+}
 return (0);
 }
