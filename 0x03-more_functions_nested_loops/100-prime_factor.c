@@ -15,9 +15,9 @@ if (num % divn == 0)
 while (num % divn == 0)
 {
 num = num / divn;
+}
+}
+}
 printf("%ld\n", divn);
-}
-}
-}
 return (0);
 }
