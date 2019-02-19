@@ -19,7 +19,7 @@ len++;
 l = len - 1;
 for (; l >= 0 ; l--)
 {
-putchar(s[l]);
+_putchar(s[l]);
 }
-putchar('\n');
+_putchar('\n');
 }
