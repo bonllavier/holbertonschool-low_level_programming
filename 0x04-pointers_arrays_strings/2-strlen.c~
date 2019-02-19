@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include "holberton.h"
+/**
+ *_strlen - length string.
+ *@s: value to be evaluate.
+ *Return: not.
+ */
+int _strlen(char *s)
+{
+
+  return (0);
+}
