@@ -1,4 +1,3 @@
-#include<stdio.h>
 #include "holberton.h"
 #include <unistd.h>
 /**
@@ -8,6 +7,10 @@
  */
 void _puts(char *str)
 {
-write(1, str, 63);
+int l = 0;
+for (; l <= 63 ; l++)
+{
+_putchar(str[l]);
+}
 _putchar('\n');
 }
