@@ -17,4 +17,5 @@ if (x != n - 1)
 printf(", ");
 }
 }
+printf("\n");
 }
