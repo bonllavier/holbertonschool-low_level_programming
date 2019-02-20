@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include "holberton.h"
+/**
+ *rev_string - update value.
+ *@s: value to be evaluate.
+ *Return: not.
+ */
+void puts_half(char *str)
+{
+int len = 0;
+int l = 0;
+char *y = str;
+int z;
+while (*y != '\0')
+{
+y++;
+len++;
+}
+l = len;
+if (l % 2 == 0)
+{
+z = l / 2;
+}
+else
+{
+z = (l - 1) / 2;
+}
+for(; z <= l ;z++)
+{
+_putchar(str[z]);
+}
+}
