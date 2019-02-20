@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include "holberton.h"
 /**
- *rev_string - update value.
- *@s: value to be evaluate.
+ *puts_half - update value.
+ *@str: value to be evaluate.
  *Return: not.
  */
 void puts_half(char *str)
@@ -25,7 +25,7 @@ else
 {
 z = (l - 1) / 2;
 }
-for(; z <= l ;z++)
+for ( ; z < l ; z++)
 {
 _putchar(str[z]);
 }
