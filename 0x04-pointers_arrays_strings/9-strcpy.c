@@ -1,14 +1,14 @@
 #include<stdio.h>
 #include "holberton.h"
 /**
- *rev_string - update value.
+ *_strcpy - update value.
  *@dest: value to be evaluate.
  *@src: value to be evaluate.
  *Return: not.
  */
 char *_strcpy(char *dest, char *src)
 {
-int l =0;
+int l = 0;
 int x = 0;
 while (*(src + l) != '\0')
 {
