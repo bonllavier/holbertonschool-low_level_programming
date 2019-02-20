@@ -1,29 +1,25 @@
 #include<stdio.h>
 #include "holberton.h"
+#include <unistd.h>
 /**
- *rev_string - update value.
+ *print_rev - update value.
  *@s: value to be evaluate.
  *Return: not.
  */
-void rev_string(char *s)
+void print_rev(char *s)
 {
 int len = 0;
-int l = 0;
+int l;
 char *y = s;
-int e = 0;
-int x;
-char n;
 while (*y != '\0')
 {
 y++;
 len++;
 }
 l = len - 1;
-for ( ; e < l ; e++)
+for (; l >= 0 ; l--)
 {
-x = (l - e);
-n = s[e];
-s[e] = s[x];
-s[x] = n;
+_putchar(s[l]);
 }
+_putchar('\n');
 }
