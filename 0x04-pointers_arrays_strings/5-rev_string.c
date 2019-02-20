@@ -1,3 +1,4 @@
+
 #include<stdio.h>
 #include "holberton.h"
 /**
@@ -19,7 +20,7 @@ y++;
 len++;
 }
 l = len - 1;
-for ( ; e < l ; e++)
+for ( ; e < ((l / 2) + 1) ; e++)
 {
 x = (l - e);
 n = s[e];
