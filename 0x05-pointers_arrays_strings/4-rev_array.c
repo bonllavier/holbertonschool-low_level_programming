@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include "holberton.h"
+/**
+ *reverse_array - compare to strings.
+ *@a: value to be evaluate.
+ *@n: value to be evaluate.
+ *Return: not.
+ */
+void reverse_array(int *a, int n)
+{
+int x;
+int tmpint;
+int y;
+for (x = 0 ; x < (n / 2) + 1 ; x++)
+{
+y = (n - x);
+tmpint = a[x];
+a[x] = a[y - 1];
+a[y - 1] = tmpint;
+}
+}
