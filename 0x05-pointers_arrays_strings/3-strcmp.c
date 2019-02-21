@@ -10,19 +10,25 @@ int _strcmp(char *s1, char *s2)
 {
 int x;
 int l = 0;
-int y = 0;
-for (x = 0 ; *(s1 + l) != '\0'; x++)
+int y;
+int conte = 0;
+while (*(s1 + l) != '\0')
+{
+l++;
+}
+l = l;
+for (x = 0 ; x < l ; x++)
 {
 y = s1[x] - s2[x];
-if (y < 0)
+if (y != 0)
 {
 return (y);
 }
-if (y > 0)
+if (y == 0)
 {
-return (y);
+conte++;
 }
-else
+if (conte == l)
 {
 return (0);
 }
