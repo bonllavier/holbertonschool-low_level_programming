@@ -16,10 +16,11 @@ while (*(dest + l) != '\0')
 l++;
 }
 l = l - 1;
-for (x = 0 ; x < n ; x++)
+for (x = 0 ; x < n && src[x] ; x++)
 {
 dest[x] = src[x];
 }
-dest[l + 1] = '\0';
+for ( ; x < n; x++)
+dest[x] = '\0';
 return (dest);
 }
