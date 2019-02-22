@@ -21,5 +21,6 @@ if ((int)c[x] > 97 && (int)c[x] < 122)
 c[x] = (int)c[x] - 32;
 }
 }
+c[x + 1] = '\0';
 return (c);
 }
