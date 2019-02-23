@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include "holberton.h"
+/**
+ *print_number - havelife.
+ *@n: value to be evaluate.
+ *Return: not.
+ */
+void print_number(int n)
+{
+unsigned int x = n;
+if (n < 0)
+{
+x = -x;
+_putchar('-');
+}
+if ((x / 10) > 0)
+{
+print_number(x / 10);
+}
+_putchar((x % 10) + '0');
+}
