@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include "holberton.h"
+/**
+ *_strcmp - compare to strings.
+ *@s1: value to be evaluate.
+ *@s2: value to be evaluate.
+ *Return: not.
+ */
+char *_memset(char *s, char b, unsigned int n)
+{
+unsigned int x;
+for (x = 0 ; x < n ; x++)
+{
+s[x] = b;
+}
+return (s);
+}
