@@ -16,6 +16,9 @@ if (s[x] == c)
 return (s + x);
 }
 }
-s = NULL;
-return (s);
+if (s[x] == c)
+{
+return (s + x);
+}
+return (NULL);
 }
