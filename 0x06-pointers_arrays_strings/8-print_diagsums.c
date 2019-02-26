@@ -19,6 +19,5 @@ for (x = (size - 1) ; x < (size * size - 1) ; x += (size - 1))
 {
 sum2 = sum2 + a[x];
 }
-printf("%d, %d ", sum, sum2);
-putchar('\n');
+printf("%d, %d\n", sum, sum2);
 }
