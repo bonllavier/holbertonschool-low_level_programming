@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include "holberton.h"
+/**
+ *print_diagsums - search set bytes.
+ *@a: value to be evaluate.
+ *@size: value to be evaluate.
+ *Return: not.
+ */
+void print_diagsums(int *a, int size)
+{
+
+}
