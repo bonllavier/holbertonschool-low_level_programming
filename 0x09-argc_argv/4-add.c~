@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include <stdlib.h>
+/**
+ *main - adds pos.
+ *@argc: value to be evaluate.
+ *@argv: value to be evaluate.
+ *Return: 0.
+ */
+int main(int argc, char **argv)
+{
+int sum = 0;
+int conf = 0;
+if (argv[1] != NULL)
+{
+int t;
+for (t = 1 ; t < (argc) ; t++)
+{
+if (isdigit(*argv[t]) > 0)
+{
+sum = sum + atoi(argv[t]);
+}
+else
+{
+printf("Error\n");
+conf = 1;
+return (1);
+}
+}
+if (conf == 0)
+{
+printf("%d\n", sum);
+}
+}
+else
+{
+printf("%d\n", 0);
+}
+(void)argc;
+return (0);
+}
