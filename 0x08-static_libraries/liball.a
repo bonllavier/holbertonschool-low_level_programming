@@ -1,0 +1,467 @@
+!<arch>
+0-isupper.c/    1551469173  1000  1000  100664  237       `
+#include "holberton.h"
+/**
+ *_isupper - checks for uppercase character
+ *@c: value to be validate.
+ *Return: int.
+ */
+int _isupper(int c)
+{
+  if (c >= 'A' && c <= 'Z')
+    {
+      return (1);
+    }
+  else
+    {
+      return (0);
+    }
+}
+
+0-memset.c/     1551469225  1000  1000  100664  323       `
+#include<stdio.h>
+#include "holberton.h"
+/**
+ *_memset - replace values until n.
+ *@s: value to be evaluate.
+ *@b: value to be evaluate.
+ *@n: value to be evaluate.
+ *Return: not.
+ */
+char *_memset(char *s, char b, unsigned int n)
+{
+  unsigned int x;
+  for (x = 0 ; x < n ; x++)
+    {
+      s[x] = b;
+    }
+  return (s);
+}
+
+0-strcat.c/     1551469262  1000  1000  100664  458       `
+#include<stdio.h>
+#include "holberton.h"
+/**
+ *_strcat - length string.
+ *@dest: value to be evaluate.
+ *@src: value to be evaluate.
+ *Return: not.
+ */
+char *_strcat(char *dest, char *src)
+{
+  int l = 0;
+  int x = 0;
+  int y = 0;
+  int tl = 0;
+  while (*(dest + l) != '\0')
+    {
+      l++;
+    }
+  l = l - 1;
+  for (x = l ; *(src + y) != '\0' ; x++)
+    {
+      dest[x + 1] = src[y];
+      y++;
+    }
+  tl = l + y;
+  dest[tl + 1] = '\0';
+  return (dest);
+}
+100-atoi.c/     1551469606  1000  1000  100664  164       `
+#include "holberton.h"
+/**
+ *_atoi - checks for a digit (0 through 9).
+ *@s: value to be validate.
+ *Return: int.
+ */
+int _atoi(char *s)
+{
+int i = 0;
+return (i);
+}
+1-isdigit.c/    1551469342  1000  1000  100664  240       `
+#include "holberton.h"
+/**
+ *_isdigit - checks for a digit (0 through 9).
+ *@c: value to be validate.
+ *Return: int.
+ */
+int _isdigit(int c)
+{
+  if (c >= '0' && c <= '9')
+    {
+      return (1);
+    }
+  else
+    {
+      return (0);
+    }
+}
+1-memcpy.c/     1551469420  1000  1000  100664  341       `
+#include<stdio.h>
+#include "holberton.h"
+/**
+ *_memcpy - copies memory area.
+ *@dest: value to be evaluate.
+ *@src: value to be evaluate.
+ *@n: value to be evaluate.
+ *Return: not.
+ */
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+  unsigned int x;
+  for (x = 0 ; x < n ; x++)
+    {
+      dest[x] = src[x];
+    }
+  return (dest);
+}
+
+1-strncat.c/    1551469461  1000  1000  100664  547       `
+#include<stdio.h>
+#include "holberton.h"
+/**
+ *_strncat - limit presentation.
+ *@dest: value to be evaluate.
+ *@src: value to be evaluate.
+ *@n: value to be evaluate.
+ *Return: not.
+ */
+char *_strncat(char *dest, char *src, int n)
+{
+  int l = 0;
+  int x = 0;
+  int y = 0;
+  int tl = 0;
+  while (*(dest + l) != '\0')
+    {
+      l++;
+    }
+  l = l - 1;
+  for (x = l ; *(src + y) != '\0' ; x++)
+    {
+      dest[x + 1] = src[y];
+      if (y < n)
+	{
+	  y++;
+	}
+      else
+	{
+	  break;
+	}
+    }
+  tl = l + y;
+  dest[tl + 1] = '\0';
+  return (dest);
+}
+
+2-strchr.c/     1551469658  1000  1000  100664  360       `
+#include<stdio.h>
+#include "holberton.h"
+/**
+ *_strchr - locate character.
+ *@s: value to be evaluate.
+ *@c: value to be evaluate.
+ *Return: char.
+ */
+char *_strchr(char *s, char c)
+{
+  int x;
+  for (x = 0 ; *(s + x) != '\0' ; x++)
+    {
+      if (s[x] == c)
+	{
+	  return (s + x);
+	}
+    }
+  if (s[x] == c)
+    {
+      return (s + x);
+    }
+  return (NULL);
+}
+2-strlen.c/     1551469691  1000  1000  100664  232       `
+#include<stdio.h>
+#include "holberton.h"
+/**
+ *_strlen - length string.
+ *@s: value to be evaluate.
+ *Return: not.
+ */
+int _strlen(char *s)
+{
+  int len = 0;
+  while (*s != '\0')
+    {
+      s++;
+      len++;
+    }
+  return (len);
+}
+2-strncpy.c/    1551469740  1000  1000  100664  455       `
+#include<stdio.h>
+#include "holberton.h"
+/**
+ *_strncpy - length string.
+ *@dest: value to be evaluate.
+ *@src: value to be evaluate.
+ *@n: value to be evaluate.
+ *Return: not.
+ */
+char *_strncpy(char *dest, char *src, int n)
+{
+  int l = 0;
+  int x = 0;
+  while (*(dest + l) != '\0')
+    {
+      l++;
+    }
+  l = l - 1;
+  for (x = 0 ; x < n && src[x] ; x++)
+    {
+      dest[x] = src[x];
+    }
+  for ( ; x < n; x++)
+    dest[x] = '\0';
+  return (dest);
+}
+
+3-islower.c/    1551469802  1000  1000  100664  288       `
+#include "holberton.h"
+/**
+ *_islower - checks for lowercase character.
+ *@c: get value to be tested for lowercase validation
+ *Return: 1 if is lowercase, 0 if not.
+ */
+int _islower(int c)
+{
+  if (c >= 'a' && c <= 'z')
+    {
+      return (1);
+    }
+  else
+    {
+      return (0);
+    }
+}
+3-puts.c/       1551469835  1000  1000  100664  253       `
+#include "holberton.h"
+#include <unistd.h>
+/**
+ *_puts - print stdout.
+ *@str: value to be evaluate.
+ *Return: not.
+ */
+void _puts(char *str)
+{
+  int l = 0;
+  while (*(str + l) != '\0')
+    {
+      _putchar(str[l]);
+      l++;
+    }
+  _putchar('\n');
+}
+
+3-strcmp.c/     1551469882  1000  1000  100664  495       `
+#include<stdio.h>
+#include "holberton.h"
+/**
+ *_strcmp - compare to strings.
+ *@s1: value to be evaluate.
+ *@s2: value to be evaluate.
+ *Return: not.
+ */
+int _strcmp(char *s1, char *s2)
+{
+  int x;
+  int l = 0;
+  int y;
+  int conte = 0;
+  while (*(s1 + l) != '\0')
+    {
+      l++;
+    }
+  l = l;
+  for (x = 0 ; x < l ; x++)
+    {
+      y = s1[x] - s2[x];
+      if (y != 0)
+	{
+	  return (y);
+	}
+      if (y == 0)
+	{
+	  conte++;
+	}
+      if (conte == l)
+	{
+	  return (0);
+	}
+    }
+  return (0);
+}
+
+3-strspn.c/     1551469912  1000  1000  100664  452       `
+#include<stdio.h>
+#include "holberton.h"
+/**
+ *_strspn - get length.
+ *@s: value to be evaluate.
+ *@accept: value to be evaluate.
+ *Return: not.
+ */
+unsigned int _strspn(char *s, char *accept)
+{
+  int x, y;
+  int z = 0;
+  int cont = 0;
+  for (x = 0 ; *(s + x) != '\0' && z == 0 ; x++)
+    {
+      z = 1;
+      for (y = 0 ; *(accept + y) != '\0' ; y++)
+	{
+	  if (accept[y] == s[x])
+	    {
+	      cont++;
+	      z = 0;
+	    }
+	}
+    }
+  return (cont);
+}
+4-isalpha.c/    1551469939  1000  1000  100664  330       `
+#include "holberton.h"
+/**
+ *_isalpha - checks for alphabetic character.
+ *@c: get value to be tested for alphabetic character validation
+ *Return: 1 if is c lowercase, 0 if not.
+ */
+int _isalpha(int c)
+{
+  if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+    {
+      return (1);
+    }
+  else
+    {
+      return (0);
+    }
+}
+4-strpbrk.c/    1551469976  1000  1000  100664  509       `
+#include<stdio.h>
+#include "holberton.h"
+/**
+ *_strpbrk - search set bytes.
+ *@s: value to be evaluate.
+ *@accept: value to be evaluate.
+ *Return: char.
+ */
+char *_strpbrk(char *s, char *accept)
+{
+  int x, y, z;
+  for (x = 0 ; *(s + x) != '\0' ; x++)
+    {
+      for (y = 0 ; *(accept + y) != '\0' ; y++)
+	{
+	  if (accept[y] == s[x])
+	    {
+	      return (s + x);
+	    }
+	}
+    }
+  for (z = 0 ; *(accept + z) != '\0' ; z++)
+    {
+      if (accept[z] == s[x])
+	{
+	  return (s + x);
+	}
+    }
+  return (NULL);
+}
+
+5-strstr.c/     1551470007  1000  1000  100664  455       `
+#include<stdio.h>
+#include "holberton.h"
+/**
+ *_strstr - compare to strings.
+ *@haystack: value to be evaluate.
+ *@needle: value to be evaluate.
+ *Return: char.
+ */
+char *_strstr(char *haystack, char *needle)
+{
+  int x = 0;
+  int y = 0;
+  for (x = 0 ; *(haystack + x) != '\0' ; x++)
+    {
+      if (haystack[x] == needle[y])
+	{
+	  return (haystack + x);
+	}
+    }
+  if (haystack[x] == needle[y])
+    {
+      return (haystack + x);
+    }
+  return (NULL);
+}
+
+6-abs.c/        1551470043  1000  1000  100664  227       `
+#include "holberton.h"
+/**
+ *_abs - computes the absolute value of an integer.
+ *@i: value to evaluate
+ *Return: int
+ */
+int _abs(int i)
+{
+  if (i < 0)
+    {
+      i = -i;
+    }
+  else
+    {
+      i = +i;
+    }
+  return (i);
+}
+
+9-strcpy.c/     1551470089  1000  1000  100664  364       `
+#include<stdio.h>
+#include "holberton.h"
+/**
+ *_strcpy - update value.
+ *@dest: value to be evaluate.
+ *@src: value to be evaluate.
+ *Return: not.
+ */
+char *_strcpy(char *dest, char *src)
+{
+  int l = 0;
+  int x = 0;
+  while (*(src + l) != '\0')
+    {
+      l++;
+    }
+  for ( ; x < l ; x++)
+    {
+      dest[x] = src[x];
+    }
+  dest[l] = '\0';
+  return (dest);
+}
+_putchar.c/     1551470127  1000  1000  100764  248       `
+#include <unistd.h>
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+  return (write(1, &c, 1));
+}
