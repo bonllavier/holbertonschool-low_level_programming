@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 {
 int sum = 0;
 int conf = 0;
-if (argv[1] != NULL)
+if (argc > 2)
 {
 int t;
 for (t = 1 ; t < (argc) ; t++)
@@ -36,6 +36,5 @@ else
 {
 printf("%d\n", 0);
 }
-(void)argc;
 return (0);
 }
