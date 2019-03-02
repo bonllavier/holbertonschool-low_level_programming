@@ -8,9 +8,13 @@
  */
 int main(int argc, char **argv)
 {
+int a = 0;
+int b = 0;
 if (argv[1] != NULL)
 {
-printf("%d\n", (atoi(argv[1]) * atoi(argv[2])));
+a = atoi(argv[1]);
+b = atoi(argv[2]);
+printf("%d\n", a *b);
 }
 else
 {
