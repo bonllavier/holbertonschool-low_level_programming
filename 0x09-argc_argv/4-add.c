@@ -16,7 +16,7 @@ if (argc > 2)
 int t;
 for (t = 1 ; t < (argc) ; t++)
 {
-if (isdigit(*argv[t]) > 0)
+if (isdigit(*argv[t]))
 {
 sum = sum + atoi(argv[t]);
 }
