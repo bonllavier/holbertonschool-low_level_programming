@@ -18,7 +18,7 @@ return (NULL);
 for (cont = 0 ; *(str + cont) != '\0' ; cont++)
 {
 }
-ptr = malloc(cont * sizeof(*ptr));
+ptr = malloc(cont * sizeof(*ptr) + 1);
 if (ptr == NULL)
 {
 return (NULL);
