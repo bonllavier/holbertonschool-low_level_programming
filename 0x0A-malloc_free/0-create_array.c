@@ -15,7 +15,7 @@ if (size == 0)
 {
 return (NULL);
 }
-ptr = malloc(size * sizeof(size));
+ptr = malloc(size * sizeof(ptr));
 if (ptr == NULL)
 {
 return (NULL);
