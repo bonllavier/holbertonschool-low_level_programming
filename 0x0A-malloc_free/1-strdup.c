@@ -27,6 +27,5 @@ for (i = 0 ; i < cont; i++)
 {
 ptr[i] = str[i];
 }
-ptr[i] = '\0';
 return (ptr);
 }
