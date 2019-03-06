@@ -14,12 +14,15 @@ int **ptr;
 ptr = malloc(height * sizeof(*ptr));
 if (ptr == NULL)
 {
-printf("error");
 return (NULL);
 }
 for (i = 0 ; i < height ; i++)
 {
 ptr[i] = malloc(width * sizeof(*ptr));
+if (ptr[i] == NULL)
+{
+return (NULL);
+}
 for (y = 0 ; y < width ; y++)
 {
 ptr[i][y] = 0;
