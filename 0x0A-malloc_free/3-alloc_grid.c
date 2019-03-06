@@ -18,7 +18,6 @@ return (NULL);
 ptr = malloc(height * sizeof(*ptr));
 if (ptr == NULL)
 {
-free(ptr);
 return (NULL);
 }
 for (i = 0 ; i < height ; i++)
