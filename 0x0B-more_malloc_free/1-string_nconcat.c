@@ -25,9 +25,7 @@ s2 = "";
 for (cont = 0 ; *(s1 + cont) != '\0' ; cont++)
 {
 }
-for (cont2 = 0 ; *(s2 + cont2) != '\0' ; cont2++)
-{
-}
+cont2 = n;
 ptr = malloc((cont + cont2) * sizeof(*ptr) + 1);
 if (ptr == NULL || ptr == 0)
 {
