@@ -19,10 +19,6 @@ if (height < 1)
 {
 return (NULL);
 }
-if (width + height < 2)
-{
-return (NULL);
-}
 ptr = malloc(height * sizeof(*ptr));
 if (ptr == NULL || ptr == 0)
 {
@@ -32,15 +28,18 @@ return (NULL);
 for (i = 0 ; i < height ; i++)
 {
 ptr[i] = malloc(width * sizeof(*ptr));
-if (ptr[i] == NULL || ptr == 0)
+if (ptr[i] == NULL || ptr[i] == 0)
 {
-for (i-- ; i >= 0 ; i--)
+for (; i >= 0 ; i--)
 {
 free(ptr[i]);
 }
 free(ptr);
 return (NULL);
 }
+}
+for (i = 0 ; i < height ; i++)
+{
 for (y = 0 ; y < width ; y++)
 {
 ptr[i][y] = 0;
