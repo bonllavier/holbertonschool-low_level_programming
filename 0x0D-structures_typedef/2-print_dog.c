@@ -18,14 +18,7 @@ else
 {
 printf("Name: (nil)\n");
 }
-if ((*d).age != 0)
-{
-printf("Age: %.6f\n", (*d).age);
-}
-else
-{
-printf("Age: (nil)\n");
-}
+printf("Age: %f\n", (*d).age);
 if ((*d).owner != 0)
 {
 printf("Owner: %s\n", (*d).owner);
