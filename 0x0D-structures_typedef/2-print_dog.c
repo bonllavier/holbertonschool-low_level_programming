@@ -16,7 +16,7 @@ printf("Name: %s\n", (*d).name);
 }
 else
 {
-printf("Name: %p\n", (*d).name);
+printf("Name: (nil)\n");
 }
 if ((*d).age != 0)
 {
@@ -32,7 +32,7 @@ printf("Owner: %s\n", (*d).owner);
 }
 else
 {
-printf("Owner: %p\n", (*d).owner);
+printf("Owner: (nil)\n");
 }
 }
 else
