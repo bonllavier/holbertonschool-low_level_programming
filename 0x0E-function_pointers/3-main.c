@@ -30,7 +30,7 @@ exit(99);
 }
 num1 = atoi(argv[1]);
 num2 = atoi(argv[3]);
-if ((operator == '/' || operator == '%') && (num1 == 0 || num2 == 0))
+if ((operator == '/' || operator == '%') && num2 == 0)
 {
 printf("Error\n");
 exit(100);
