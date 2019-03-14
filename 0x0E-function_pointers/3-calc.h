@@ -1,5 +1,5 @@
-#ifndef _CALC_
-#define _CALC_
+#ifndef CALC
+#define CALC
 #include <stddef.h>
 int op_add(int a, int b);
 int op_sub(int a, int b);

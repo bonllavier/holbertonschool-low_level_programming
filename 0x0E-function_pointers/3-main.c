@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include <stdlib.h>
 #include "3-calc.h"
+#include <string.h>
 /**
  *main - print
  *@argc: string to copy.
@@ -9,6 +10,8 @@
  */
 int main(int argc, char *argv[])
 {
+char *sign;
+char operator;
 int num1 = 0;
 int num2 = 0;
 int (*ptr2)(int,  int);
@@ -18,18 +21,23 @@ if (argc != 4)
 printf("Error\n");
 exit(98);
 }
-if ((atoi(argv[1]) == 0 || atoi(argv[3]) == 0))
+operator = argv[2][0];
+if ((operator != '*' && operator != '+' && operator != '-'
+&& operator != '/'  && operator != '%') || argv[2][1] != '\0')
 {
-if ((int)*argv[2] == 47 || (int)*argv[2] == 37)
+printf("Error\n");
+exit(99);
+}
+num1 = atoi(argv[1]);
+num2 = atoi(argv[3]);
+if ((operator == '/' || operator == '%') && (num1 == 0 || num2 == 0))
 {
 printf("Error\n");
 exit(100);
 }
-}
-num1 = atoi(argv[1]);
-num2 = atoi(argv[3]);
-ptr2 = get_op_func(argv[2]);
-res = ptr2(num1, num2);
+sign = argv[2];
+ptr2 = get_op_func(sign);
+res = (*ptr2)(num1, num2);
 printf("%d\n", res);
 return (0);
 }

@@ -21,13 +21,8 @@ for (i = 0 ; i < 5; i++)
 {
 if (*(ops[i].op) == *s)
 {
-return (ops[i].f);
+return (*(ops[i]).f);
 }
-}
-if (i == 5)
-{
-printf("Error\n");
-exit(99);
 }
 return (NULL);
 }
