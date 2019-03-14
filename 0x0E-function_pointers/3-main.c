@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include <stdlib.h>
-#include <stddef.h>
 #include "3-calc.h"
 /**
  *main - print
@@ -16,7 +15,7 @@ int (*ptr2)(int,  int);
 int res = 0;
 if (argc != 4)
 {
-printf("Error arg\n");
+printf("Error\n");
 exit(98);
 }
 if ((atoi(argv[1]) == 0 || atoi(argv[3]) == 0))
