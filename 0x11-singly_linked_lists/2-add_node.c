@@ -18,7 +18,7 @@ list_t *add_node(list_t **head, const char *str)
 	{
 		return (NULL);
 	}
-	for (i = 0 ; *(str2 + i) != 0 ; i++)
+	for (i = 0 ; *(str2 + i) != '\0' ; i++)
 	{
 	}
 	new_head->str = str2;
