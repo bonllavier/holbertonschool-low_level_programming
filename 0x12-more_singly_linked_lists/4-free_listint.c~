@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <string.h>
+#include "lists.h"
+/**
+ *add_node_end - put new tail
+ *@head: head
+ *@str: string.
+ *Return: address.
+ */
+void free_listint(listint_t *head)
+{
+	listint_t *next;
+
+	while (head != NULL)
+	{
+		next = head->next;
+		free(head);
+		head = next;
+	}
+}
