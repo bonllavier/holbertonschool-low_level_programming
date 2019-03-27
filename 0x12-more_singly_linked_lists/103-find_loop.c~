@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <string.h>
+#include "lists.h"
+#include <stddef.h>
+/**
+ *print_listint_safe - safe
+ *@head: head
+ *Return: address.
+ */
+listint_t *find_listint_loop(listint_t *head)
+{
+	return (head);
+}
