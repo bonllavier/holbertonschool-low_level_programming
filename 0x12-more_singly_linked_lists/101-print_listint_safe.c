@@ -12,5 +12,9 @@ size_t print_listint_safe(const listint_t *head)
 {
 	size_t h = 0;
 
+	if (head == NULL)
+	{
+		exit(98);
+	}
 	return (h);
 }
