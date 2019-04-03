@@ -11,7 +11,7 @@
  *@av: argu vector.
  *Return: number.
  */
-int main(int ac, char **av)
+int main(int ac, char *av[])
 {
 	int fdo, fdc, bytes_read, chars_write = 0;
 	char c[1024];
