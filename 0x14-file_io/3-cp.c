@@ -26,7 +26,7 @@ int main(int ac, char **av)
 	fdc = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fdc == -1)
 	{ dprintf(STDERR_FILENO,
-		  "Error: Can't read from file %s\n", av[2]);
+		  "Error: Can't read from file %s\n", av[1]);
 		exit(98); }
 	bytes_read = read(fdo, c, 1024);
 	if (bytes_read == -1)
