@@ -17,13 +17,14 @@ int main(int ac, char **av)
 	int bytes_read = 0;
 	int chars_write = 0;
 	char *c;
-	int close1 = 0;
-	int close2 = 0;
+	int close1, close2 = 0;
+	mode_t mode;
 
+	mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	if (ac == 3)
 	{
 	fdo = open(av[1], O_RDONLY);
-	fdc = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0666);
+	fdc = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, mode);
 	if (fdo == -1 || fdc == -1)
 	{ dprintf(STDERR_FILENO,
 			"Error: Can't read from file NAME_OF_THE_FILE %s\n", av[1]);
