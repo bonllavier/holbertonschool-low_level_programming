@@ -16,7 +16,7 @@ int main(int ac, char **av)
 	int fdo, fdc;
 	int bytes_read = 0;
 	int chars_write = 0;
-	char *c;
+	char c[1024];
 	int close1, close2 = 0;
 	mode_t mode;
 
@@ -29,7 +29,6 @@ int main(int ac, char **av)
 	{ dprintf(STDERR_FILENO,
 			"Error: Can't read from file NAME_OF_THE_FILE %s\n", av[1]);
 		exit(98); }
-	c = malloc(1024);
 	bytes_read = read(fdo, c, 1024);
 	chars_write = write(fdc, c, bytes_read);
 	if (chars_write == -1)
