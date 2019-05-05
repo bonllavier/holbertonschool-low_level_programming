@@ -16,6 +16,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *tmp = *h;
 	dlistint_t *chekernull = *h;
 
+	if (h == NULL)
+		return (0);
 	if (new_head == NULL)
 	{ free(new_head);
 		return (0); }
