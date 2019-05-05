@@ -31,5 +31,6 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		fast_iter = fast_iter->next;
 	}
 	fast_iter->next = new_tail;
+	new_tail->prev = fast_iter;
 	return (*head);
 }
