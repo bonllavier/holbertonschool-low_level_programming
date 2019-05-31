@@ -6,7 +6,10 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	if (ht != NULL)
+	if (ht == NULL)
+	{
+		return;
+	}
 	{
 		unsigned int i;
 		int ver = 0;
@@ -25,9 +28,5 @@ void hash_table_print(const hash_table_t *ht)
 			}
 		}
 		printf("}\n");
-	}
-	else
-	{
-		return;
 	}
 }
