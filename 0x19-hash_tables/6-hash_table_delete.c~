@@ -1,0 +1,21 @@
+#include "hash_tables.h"
+
+/**
+ * hash_table_delete - delete all hash
+ * @ht: table
+ *
+ * Return: the index of the key
+ */
+void hash_table_delete(hash_table_t *ht)
+{
+	for (int i = 0; i < ht->size; i++)
+	{
+		ht_item *item = ht->items[i];
+		if (item != NULL)
+		{
+			ht_del_item(item);
+		}
+	}
+	free(ht->items);
+	free(ht);
+}
