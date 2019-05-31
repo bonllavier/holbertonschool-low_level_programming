@@ -13,8 +13,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_table_t *head;
 	hash_node_t *list;
 
-	if (value == NULL || key == NULL || strcmp(key, "") || strcmp(value, "")
-|| ht == NULL)
+	if (value == NULL || key == NULL ||
+strcmp(key, "") == 0 || strcmp(value, "") == 0 || ht == NULL)
 	{
 		return (0);
 	}
@@ -26,10 +26,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (!strcmp(list->key, key))
 		{
-			/*char *ret = list->value;*/
 			free(list->value);
 			list->value = strdup(value);
-			return(1);
+			return (1);
 		}
 		list = list->next;
 	}
