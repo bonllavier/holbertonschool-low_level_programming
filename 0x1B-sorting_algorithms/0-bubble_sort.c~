@@ -1,0 +1,35 @@
+#include "sort.h"
+
+/**
+ *bubble_sort - Entry point
+ *@array: array
+ *@size: size
+ * Return: Always 0
+ */
+void bubble_sort(int *array, size_t size)
+{
+	int i;
+	listint_t **head = NULL;
+	(void)(array);
+	(void)(size);
+
+	if (array != NULL)
+	{
+		for(i = 0 ; *(array + i) != '\0' ; i++)
+		{
+			listint_t *new_head = malloc(sizeof(listint_t));
+			if (new_head == NULL)
+			{
+				free(new_head);
+			}
+			new_head->n = *(array + i);
+			new_head->next = *head;
+			new_head->prev = NULL;
+			if (*head != NULL)
+			{
+				(*head)->prev = new_head;
+			}
+			*head = new_head;
+		}
+	}
+}
