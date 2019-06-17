@@ -8,29 +8,26 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	int i;
-	listint_t *head = NULL;
-	(void)(array);
-	(void)(size);
+	unsigned int i;
+	int tmp_num = 0;
+	int ver_unorder = 1;
 
-	if (array != NULL)
+	if (array != NULL && size >= 2)
 	{
-		for(i = 0 ; *(array + i) != '\0' ; i++)
+		while (ver_unorder == 1)
 		{
-			listint_t *new_head = malloc(sizeof(listint_t));
-			if (new_head == NULL)
+			ver_unorder = 0;
+			for (i = 0 ; i < size ; i++)
 			{
-				free(new_head);
+				if (*(array + i) > *(array + i + 1) && i < (size - 1))
+				{
+					tmp_num = *(array + i + 1);
+					*(array + i + 1) = *(array + i);
+					*(array + i) = tmp_num;
+					print_array(array, size);
+					ver_unorder = 1;
+				}
 			}
-			new_head->n = *(array + i);
-			new_head->next = *head;
-			new_head->prev = NULL;
-			if (*head != NULL)
-			{
-				(*head)->prev = new_head;
-			}
-			*head = new_head;
 		}
 	}
-	
 }
