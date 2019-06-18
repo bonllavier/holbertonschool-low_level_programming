@@ -9,52 +9,58 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *tmp = *list;
 	listint_t *runner = *list;
-	int size = 0;
-	int tmp_ant = 0;
-	listint_t *tmpp_prev = NULL;
-	listint_t *tmpac_next = NULL;
-	listint_t *tmpac_prev = NULL;
-	int pos = 0;
+	int size, tmp_ant, pos = 0;
+	listint_t *tmpp_prev, *tmpac_next, *tmpac_prev = NULL;
 
-	if (list != NULL)
+	size = get_list_size(tmp);
+	if (list != NULL && size >= 2)
 	{
-		while (tmp != NULL)
+		while (runner != '\0')
 		{
-			tmp = tmp->next;
-			size++;
-		}
-		if (size >= 2)
-		{
-			while(runner != '\0')
+			if (tmp_ant > runner->n)
 			{
-				if (tmp_ant > runner->n && pos > 1 && pos < 9)
-				{
-					tmpp_prev = runner->prev->prev;
-					/*printf("%d tmpp_prev\n", tmpp_prev->n);*/
-					tmpac_next = runner->next;
-					/*printf("%d tmpac_next\n", tmpac_next->n);*/
-					tmpac_prev = runner->prev;
-					/*printf("%d tmpac_prev\n", tmpac_prev->n);*/
-
-					runner->prev = tmpp_prev;
-					runner->next = tmpac_prev;
-
-					tmpac_prev->next = tmpac_next;
-					tmpac_prev->prev = runner;
-
-					tmpp_prev->next = runner;
-					tmpac_next->prev = tmpac_prev;
-					print_list(*list);
-
-					runner = *list;
-					pos = 0;
-				}
-				printf("pos: %d\n", pos);
-				pos++;
-				tmp_ant = runner->n;
-				runner = runner->next;
+				if (pos > 1)
+				{ tmpp_prev = runner->prev->prev; }
+				else
+				{ tmpp_prev = NULL; }
+				if (pos < (size - 1))
+				{ tmpac_next = runner->next; }
+				else
+				{ tmpac_next = NULL; }
+				tmpac_prev = runner->prev;
+				runner->prev = tmpp_prev;
+				runner->next = tmpac_prev;
+				tmpac_prev->next = tmpac_next;
+				tmpac_prev->prev = runner;
+				if (pos > 1)
+				{ tmpp_prev->next = runner; }
+				else
+				{ *list = runner; }
+				if (pos < (size - 1))
+				{ tmpac_next->prev = tmpac_prev; }
+				print_list(*list);
+				runner = *list;
+				pos = 0;
 			}
+			pos++;
+			tmp_ant = runner->n;
+			runner = runner->next;
 		}
 	}
-/*	printf("%d", size);*/
+}
+/**
+ *get_list_size - insert
+ *@tmp: list
+ * Return: int
+ */
+int get_list_size(listint_t *tmp)
+{
+	int size = 0;
+
+	while (tmp != NULL)
+	{
+		tmp = tmp->next;
+		size++;
+	}
+	return (size);
 }
