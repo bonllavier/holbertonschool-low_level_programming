@@ -27,9 +27,16 @@ void insertion_sort_list(listint_t **list)
 		{
 			while(runner != '\0')
 			{
-				if (tmp_ant > runner->n && pos > 1 && pos < 9)
+				if (tmp_ant > runner->n)
 				{
-					tmpp_prev = runner->prev->prev;
+					if(pos != 1)
+					{
+						tmpp_prev = runner->prev->prev;
+					}
+					else if(pos == 1)
+					{
+						tmpp_prev = NULL;
+					}
 					/*printf("%d tmpp_prev\n", tmpp_prev->n);*/
 					tmpac_next = runner->next;
 					/*printf("%d tmpac_next\n", tmpac_next->n);*/
@@ -42,11 +49,20 @@ void insertion_sort_list(listint_t **list)
 					tmpac_prev->next = tmpac_next;
 					tmpac_prev->prev = runner;
 
-					tmpp_prev->next = runner;
+					if(pos != 1)
+					{
+						tmpp_prev->next = runner;
+					}
+					else if(pos == 1)
+					{
+					}
 					tmpac_next->prev = tmpac_prev;
 					print_list(*list);
-
-					runner = *list;
+					if(pos != 1)
+                                        {
+						runner = *list;
+					}
+else
 					pos = 0;
 				}
 				printf("pos: %d\n", pos);
