@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- *selection_sort - insert
+ *quick_sort - insert
  *@array: list
  *@size: size
  * Return: Always 0
