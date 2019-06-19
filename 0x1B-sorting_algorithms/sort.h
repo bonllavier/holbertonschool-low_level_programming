@@ -20,7 +20,6 @@ void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 void insertion_sort_list(listint_t **list);
 int get_list_size(listint_t *tmp);
-void reversePrint(listint_t** head_ref);
 void selection_sort(int *array, size_t size);
 void recur_sort(int *array, int low, int high, size_t size);
 int partition(int *arr, int low, int high, size_t size);

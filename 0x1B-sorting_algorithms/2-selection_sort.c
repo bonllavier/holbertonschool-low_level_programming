@@ -10,6 +10,7 @@ void selection_sort(int *array, size_t size)
 {
 	unsigned int i = 0, j = 0;
 	int index_min = 0;
+	unsigned int tmp = 0;
 
 	if (array != NULL && size >= 2)
 	{
@@ -23,26 +24,11 @@ void selection_sort(int *array, size_t size)
 					index_min = j;
 				}
 			}
-			swap(&array[index_min], &array[i], array, size);
+			tmp = array[index_min];
+			array[index_min] = array[i];
+			array[i] = tmp;
+			if (array[index_min] != array[i])
+				print_array(array, size);
 		}
-	}
-}
-
-/**
- *swap - swap
- *@xp: index1
- *@yp: index2
- *@array: list
- *@size: size
- * Return: Always 0
- */
-void swap(int *xp, int *yp, int *array, size_t size)
-{
-	int temp = *xp;
-	*xp = *yp;
-	*yp = temp;
-	if (*xp != *yp)
-	{
-		print_array(array, size);
 	}
 }
