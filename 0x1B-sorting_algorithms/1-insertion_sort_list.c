@@ -7,8 +7,8 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	int size, tmp_ant, pos = 0;
-	listint_t *tmpp_prev, *tmpac_next, *tmpac_prev, *tmp, *runner = NULL;
+	int size = 0, tmp_ant = 0, pos = 0;
+	listint_t *tmpp_prev, *tmpac_next, *tmpac_prev, *tmp, *runner;
 
 	if (list)
 	{ tmp = *list, runner = *list; }

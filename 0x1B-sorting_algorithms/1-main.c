@@ -51,6 +51,8 @@ int main(void)
 	printf("\n");
 	insertion_sort_list(&list);
 	printf("\n");
+/*	reversePrint(&list);
+	printf("\n");*/
 	print_list(list);
 	return (0);
 }
