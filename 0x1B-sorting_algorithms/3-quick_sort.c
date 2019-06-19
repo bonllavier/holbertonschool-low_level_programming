@@ -44,35 +44,28 @@ int partition(int *arr, int low, int high, size_t size)
 	int pivot = arr[high];
 	int i = (low - 1);
 	int j = 0;
+	unsigned int tmp = 0;
 
 	for (j = low ; j <= high - 1 ; j++)
 	{
 		if (arr[j] <= pivot)
 		{
 			i++;
-			change_quick(&arr[i], &arr[j]);
+			tmp = arr[i];
+			arr[i] = arr[j];
+			arr[j] = tmp;
 			if (&arr[i] != &arr[j])
 			{
 				print_array(arr, size);
 			}
 		}
 	}
-	change_quick(&arr[i + 1], &arr[high]);
+	tmp = arr[i + 1];
+	arr[i + 1] = arr[high];
+	arr[high] = tmp;
 	if (&arr[i + 1] != &arr[high])
 	{
 		print_array(arr, size);
 	}
 	return (i + 1);
-}
-/**
- *swap_quick - swap
- *@x: index
- *@y: index2
- * Return: Always 0
- */
-void change_quick(int *x, int *y)
-{
-	int t = *x;
-	*x = *y;
-	*y = t;
 }
