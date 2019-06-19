@@ -21,4 +21,6 @@ void print_list(const listint_t *list);
 void insertion_sort_list(listint_t **list);
 int get_list_size(listint_t *tmp);
 void reversePrint(listint_t** head_ref);
+void selection_sort(int *array, size_t size);
+void swap(int *xp, int *yp, int *array, size_t size);
 #endif
