@@ -1,5 +1,13 @@
 #!/usr/bin/python3
+"""
+module 5-island_perimeter
+"""
+
+
 def island_perimeter(grid):
+    """
+    return the perimeter
+    """
     cont = 0
     tamx = len(grid)
     tamy = len(grid[1])
