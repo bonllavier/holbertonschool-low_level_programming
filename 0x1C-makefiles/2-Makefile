@@ -10,5 +10,5 @@ main.o: main.c
 holberton.o: holberton.c
 	$(CC) -c -o holberton.o holberton.c
 
-holberton1: main.o holberton.o
-	$(CC) main.o holberton.o -o $(NAME)
+holberton1: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
