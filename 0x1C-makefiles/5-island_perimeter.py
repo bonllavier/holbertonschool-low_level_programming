@@ -17,7 +17,7 @@ def island_perimeter(grid):
             if grid[iter][iter2] == 1:
                 cont += 1
                 break
-    for iter in range(tamx - 1, 0, -1):
+    for iter in range(tamx - 1, -1, -1):
         for iter2 in range(tamy - 1, 0, -1):
             if grid[iter][iter2] == 1:
                 cont += 1
@@ -27,7 +27,7 @@ def island_perimeter(grid):
             if grid[iter2][iter] == 1:
                 cont += 1
                 break
-    for iter in range(tamy - 1, 0, -1):
+    for iter in range(tamy - 1, -1, -1):
         for iter2 in range(tamx - 1, 0, -1):
             if grid[iter2][iter] == 1:
                 cont += 1
