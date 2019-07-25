@@ -23,7 +23,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
  *	printf("%d l %d r \n",sizel, sizer);
  *	printf("%d ltotal %d rtotal \n",totalsizel, totalsizer);
  */
-	if (sizel == sizer)
+	if (sizel == sizer && tree->left != NULL && tree->right != NULL)
 	{
 		if (totalsizel == 0 && totalsizer == 0)
 		{
