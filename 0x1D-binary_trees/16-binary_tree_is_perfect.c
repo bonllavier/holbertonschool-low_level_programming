@@ -25,7 +25,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
  */
 	if (sizel == sizer)
 	{
-		if (totalsizel % 3 == 0 || totalsizer % 3 == 0)
+		if ((totalsizel + 1) % 2 == 0 || (totalsizer + 1) % 2 == 0)
 		{
 			return (1);
 		}
