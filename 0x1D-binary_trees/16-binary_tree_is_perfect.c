@@ -15,6 +15,10 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	{
 		return (0);
 	}
+	if (tree->left == NULL && tree->right == NULL)
+	{
+		return (1);
+	}
 	sizel = height_2(tree->left);
 	sizer = height_2(tree->right);
 	totalsizel = binary_tree_size(tree->left);
@@ -23,13 +27,13 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
  *	printf("%d l %d r \n",sizel, sizer);
  *	printf("%d ltotal %d rtotal \n",totalsizel, totalsizer);
  */
-	if (sizel == sizer && tree->left != NULL && tree->right != NULL)
+	if (sizel == sizer)
 	{
 		if (totalsizel == 0 && totalsizer == 0)
 		{
 			return (1);
 		}
-		if ((totalsizel + 1) % 2 == 0 || (totalsizer + 1) % 2 == 0)
+		else if ((totalsizel + 1) % 2 == 0 && (totalsizer + 1) % 2 == 0)
 		{
 			return (1);
 		}
