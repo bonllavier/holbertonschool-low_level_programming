@@ -8,6 +8,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	int sizel = 0;
 	int sizer = 0;
+	int totalsizel = 0;
+	int totalsizer = 0;
 
 	if (tree == NULL)
 	{
@@ -15,12 +17,22 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	}
 	sizel = height_2(tree->left);
 	sizer = height_2(tree->right);
+	totalsizel = binary_tree_size(tree->left);
+	totalsizer = binary_tree_size(tree->right);
 /*
- *printf("%d l %d r \n",sizel, sizer);
-*/
+ *	printf("%d l %d r \n",sizel, sizer);
+ *	printf("%d ltotal %d rtotal \n",totalsizel, totalsizer);
+ */
 	if (sizel == sizer)
 	{
-		return (1);
+		if (totalsizel % 3 == 0 || totalsizer % 3 == 0)
+		{
+			return (1);
+		}
+		else
+		{
+			return (0);
+		}
 	}
 	else
 	{
@@ -50,5 +62,26 @@ size_t height_2(const binary_tree_t *tree)
 	else
 	{
 		return (0);
+	}
+}
+/**
+ *binary_tree_size - depth
+ *@tree: tree.
+ *Return: size the add between depths
+ */
+size_t binary_tree_size(const binary_tree_t *tree)
+{
+	size_t depthl = 0;
+	size_t depthr = 0;
+
+	if (tree == NULL)
+	{
+		return (0);
+	}
+	else
+	{
+		depthl = binary_tree_size(tree->left);
+		depthr = binary_tree_size(tree->right);
+		return ((depthl + depthr) + 1);
 	}
 }
